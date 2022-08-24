@@ -1,0 +1,19 @@
+{
+  "name": "cms-api",
+  "version": "0.1.0",
+  "description": "API for our CMS product. ",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Thaonnor/CMS-API.git"
+  },
+  "author": "Michael Zaerr",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Thaonnor/CMS-API/issues"
+  },
+  "homepage": "https://github.com/Thaonnor/CMS-API#readme"
+}
