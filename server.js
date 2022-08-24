@@ -1,4 +1,5 @@
 const express = require('express');
+const dotenv = require('dotenv');
 
 const app = express();
 
@@ -6,6 +7,8 @@ app.get('/', (req, res, next) => {
     res.status(200).send('This is a test response');
 });
 
-app.listen(3000, () => {
-    console.log('Server now listening on port 3000');
+const port = process.env.port || 3000;
+
+app.listen(port, () => {
+    console.log(`Server listening on port ${port}...`);
 });
