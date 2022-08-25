@@ -1,19 +1,22 @@
 const express = require('express');
-const article = require('../routes/articleRouter.js');
-const router = express.Router();
+const article = require('../db/articleQueries.js');
 
-router.get('/article', getArticles);
+function routes() {
+    const router = express.Router();
 
-router.get('/article/:id', getArticleById);
+    router.get('/articles', article.getArticles);
 
-router.get('/article/?page=:pageNumber', getArticlesPage);
+    router.get('/article/:id', article.getArticleById);
 
-router.post('/article', createArticle);
+    router.get('/article?page=:pageNumber', article.getArticlesPage);
 
-router.patch('/article/:id', updateArticle);
+    router.post('/article', article.createArticle);
 
-router.delete('/article/:id', deleteArticle);
+    router.patch('/article/:id', article.updateArticle);
 
-module.exports = {
-    router
+    router.delete('/article/:id', article.deleteArticle);
+
+    return router;
 }
+
+module.exports = routes;

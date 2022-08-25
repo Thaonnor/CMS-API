@@ -1,18 +1,16 @@
 const pool = require('./db').getPool();
 
-const getArticles = (req, res, next) => {
-    pool.query('SELECT * from article JOIN ')
-};
+const getArticles = (req, res, next) => {};
 
-const getArticleById = () => {};
+const getArticleById = (req, res, next) => {};
 
-const getArticlesPage = () => {};
+const getArticlesPage = (req, res, next) => {};
 
-const createArticle = () => {};
+const createArticle = (req, res, next) => {};
 
-const updateArticle = () => {};
+const updateArticle = (req, res, next) => {};
 
-const deleteArticle = () => {};
+const deleteArticle = (req, res, next) => {};
 
 module.exports = {
     getArticles,
