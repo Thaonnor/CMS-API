@@ -8,7 +8,7 @@ function routes() {
 
     router.get('/article/:id', article.getArticleById);
 
-    router.get('/article?page=:pageNumber', article.getArticlesPage);
+    router.get('/articles/page=:num', article.getArticlesPage);
 
     router.post('/article', article.createArticle);
 
