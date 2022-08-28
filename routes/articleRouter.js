@@ -6,6 +6,8 @@ function routes() {
 
     router.get('/articles', article.getArticles);
 
+    router.get('/articles/:page', article.getArticlesPage);
+
     router.get('/article/:id', article.getArticleById);
 
     router.get('/articles?page=:p', article.getArticlesPage);

@@ -22,7 +22,20 @@ const getArticleById = (req, res, next) => {
     })
 };
 
-const getArticlesPage = (req, res, next) => {};
+const getArticlesPage = (req, res, next) => {
+    const page = req.params.page;
+    const limit = 10;
+    const offset = (page * limit) - limit;
+    
+
+    pool.query('SELECT * FROM article LIMIT $1 OFFSET $2', [limit, offset], (err, results) => {
+        if(err) {
+            res.status(500).send(err);
+        }
+
+        res.status(200).json(results.rows);
+    })
+}
 
 const createArticle = (req, res, next) => {};
 
